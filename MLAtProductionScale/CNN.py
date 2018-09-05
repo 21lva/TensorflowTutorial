@@ -38,7 +38,6 @@ train_data=mnist.train.images
 train_labels=np.asarray(mnist.train.labels,dtype=np.int32)
 eval_data=mnist.test.images
 eval_labels=np.asarray(mnist.test.labels,dtype=np.int32)
-
 classifier=tf.estimator.Estimator(model_fn=model_fn,model_dir="./a")
 
 logging_hook = tf.train.LoggingTensorHook(tensors = {"probabilities":"softmax_tensor"},every_n_iter=30)
